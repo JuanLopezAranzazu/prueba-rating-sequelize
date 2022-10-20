@@ -1,0 +1,52 @@
+GET http://localhost:3001/api/v1/users
+
+###
+
+POST http://localhost:3001/api/v1/users
+Content-Type: application/json
+
+{
+  "fullname": "usuario prueba2",
+  "email": "usuarioprueba2@gmail.com",
+  "password": "root123"
+}
+
+###
+
+GET http://localhost:3001/api/v1/projects/?limit=3&offset=0
+
+###
+
+POST http://localhost:3001/api/v1/projects
+Content-Type: application/json
+
+{
+  "name": "project5",
+  "description": "project5 description",
+  "status": "finished"
+}
+
+###
+
+POST http://localhost:3001/api/v1/projects/add
+Content-Type: application/json
+
+{
+  "userId": 2,
+  "projectId": 2
+}
+
+###
+
+GET http://localhost:3001/api/v1/ratings
+
+###
+
+POST http://localhost:3001/api/v1/ratings
+Content-Type: application/json
+
+{
+  "rate": 2.4,
+  "userId": 2,
+  "projectId": 2
+}
